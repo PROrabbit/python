@@ -50,10 +50,10 @@ if __name__ == '__main__':
         pointY = float(pData[pointN].split()[1])
         pointN += 1
 
-        pByEdge = []
         # поскольку у нас нет информации о том, что стороны прямоугольника обязательно находится на координатных осях, и/или параллельны им
         # проверяем, с какой стороны ребра выпуклого многоугольника находится точка (для каждого из ребер)
         # по формуле: D = (x2 - x1) * (yp - y1) - (xp - x1) * (y2 - y1)
+        pByEdge = []
         pByEdge.append((square2x - square1x) * (pointY - square1y) - (pointX - square1x) * (square2y - square1y))
         pByEdge.append((square3x - square2x) * (pointY - square2y) - (pointX - square2x) * (square3y - square2y))
         pByEdge.append((square4x - square3x) * (pointY - square3y) - (pointX - square3x) * (square4y - square3y))
